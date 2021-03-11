@@ -49,5 +49,4 @@ calculator.addEventListener('click', function() {
     }
 
     document.getElementById('price').innerHTML = finalPrice;
-    price = 5;
 });
