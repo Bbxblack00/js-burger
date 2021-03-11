@@ -15,10 +15,36 @@ calculator.addEventListener('click', function() {
       var trueIngredient = ingredient.checked;
       var priceIngredient = parseInt(ingredient.dataset.price)
 
-      finalPrice += priceIngredient;
-      
+      if (trueIngredient) {
+        finalPrice += priceIngredient;
+      }
+
     }
 
+    var coupons = [
+      'Ilmiosconto01',
+      'Ilmiosconto02',
+      'Ilmiosconto03'
+    ];
 
-  }
+    var burgerCoupon = getElementById('burger-coupon').value;
+    for (var i = 0; i < coupons.length; i++) {
+
+       var coupon = coupons[i];
+
+       if (coupon == burgerCoupon) {
+
+           finded = true;
+
+         }
+       }
+       if (finded) {
+
+         finalPrice -= finalPrice * 0.2;
+
+       }
+
+    }
+
+    document.getElementById('price').innerHTML = finalPrice;
 });
