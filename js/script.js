@@ -27,10 +27,12 @@ calculator.addEventListener('click', function() {
       'Ilmiosconto03'
     ];
 
-    var burgerCoupon = getElementById('burger-coupon').value;
+    var burgerCoupon = document.getElementById('burger-coupon').value;
     for (var i = 0; i < coupons.length; i++) {
 
        var coupon = coupons[i];
+
+       var finded = false;
 
        if (coupon == burgerCoupon) {
 
@@ -47,4 +49,5 @@ calculator.addEventListener('click', function() {
     }
 
     document.getElementById('price').innerHTML = finalPrice;
+    price = 5;
 });
