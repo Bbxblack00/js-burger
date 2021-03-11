@@ -1,7 +1,9 @@
 
-var finalPrice = 5;
+var finalPrice;
 var calculator = document.getElementById('calculate');
 calculator.addEventListener('click', function() {
+
+  finalPrice = 5;
 
   var burgerName = document.getElementById('burger-name').value;
   if (burgerName.length < 1) {
