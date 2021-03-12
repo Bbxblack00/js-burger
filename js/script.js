@@ -16,11 +16,14 @@ calculator.addEventListener('click', function() {
   }else {
 
     var ingredients = document.getElementsByClassName('ingred');
+    var ingredient;
+    var trueIngredient;
+    var priceIngredient;
 
     for (var i = 0; i < ingredients.length; i++) {
-      var ingredient = ingredients[i];
-      var trueIngredient = ingredient.checked;
-      var priceIngredient;
+      ingredient = ingredients[i];
+      trueIngredient = ingredient.checked;
+      priceIngredient;
 
       if (trueIngredient) {
         priceIngredient = parseInt(ingredient.dataset.price);
@@ -32,10 +35,11 @@ calculator.addEventListener('click', function() {
 
 
     var burgerCoupon = document.getElementById('burger-coupon').value;
+    var coupon;
     var finded = false;
     for (var i = 0; i < coupons.length; i++) {
 
-       var coupon = coupons[i];
+       coupon = coupons[i];
 
 
        if (coupon == burgerCoupon) {
